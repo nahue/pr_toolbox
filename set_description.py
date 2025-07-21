@@ -169,17 +169,6 @@ Please provide a concise, professional PR description:
         except Exception as e:
             console.print(f"[red]OpenAI API error: {e}[/red]")
             return None
-    
-    def update_pr_description(self, repo_name: str, pr_number: int, new_description: str) -> bool:
-        """Update the PR description on GitHub"""
-        try:
-            repo = self.github.get_repo(repo_name)
-            pr = repo.get_pull(pr_number)
-            pr.edit(body=new_description)
-            return True
-        except GithubException as e:
-            console.print(f"[red]Failed to update PR: {e}[/red]")
-            return False
 
 
 @click.command()

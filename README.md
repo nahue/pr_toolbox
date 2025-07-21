@@ -9,7 +9,6 @@ A powerful tool to generate concise, professional pull request descriptions and 
 - 🔍 **Code Review**: Comprehensive analysis for security vulnerabilities, code smells, and readability issues
 - 📊 **Smart Analysis**: Analyzes files changed, commit messages, and code statistics
 - 🎨 **Beautiful Output**: Rich terminal interface with colored output
-- ⚡ **Easy Updates**: Option to automatically update PR descriptions on GitHub
 - 🚨 **Issue Detection**: Identifies security vulnerabilities, performance issues, and code quality problems
 
 ## Installation
@@ -70,15 +69,6 @@ python set_description.py --pr 123
 python set_description.py --repo owner/repo --pr 123
 ```
 
-#### Update PR Description
-```bash
-# Generate and update the PR description on GitHub
-python set_description.py
-
-# For specific PR
-python set_description.py --repo owner/repo --pr 123
-```
-
 ### Code Review
 
 #### Basic Code Review
@@ -109,7 +99,6 @@ python review_code.py --repo owner/repo --pr 123 --model gpt-3.5-turbo-16k
 |--------|-------|-------------|
 | `--repo` | `-r` | Repository name (owner/repo) |
 | `--pr` | `-p` | Pull request number |
-| `--update` | `-u` | Update PR description on GitHub |
 | `--token` | `-t` | GitHub token (overrides env var) |
 
 #### Code Review
@@ -133,7 +122,6 @@ python review_code.py --repo owner/repo --pr 123 --model gpt-3.5-turbo-16k
    - Commit messages
    - Current description
 4. **AI Generation**: Uses OpenAI GPT-4 to create a concise, professional description
-5. **Optional Update**: Can automatically update the PR description on GitHub
 
 ### Code Review
 1. **PR Fetching**: Retrieves the specified pull request from GitHub
