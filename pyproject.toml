@@ -1,0 +1,17 @@
+[project]
+name = "pr-toolbox"
+version = "0.1.0"
+description = "A tool to generate concise pull request descriptions using OpenAI"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "PyGithub>=2.1.1",
+    "openai>=1.0.0",
+    "python-dotenv>=1.0.0",
+    "click>=8.1.0",
+    "rich>=13.0.0"
+]
+
+[project.scripts]
+pr-toolbox = "main:main"
+pr-review = "review_code:main"
