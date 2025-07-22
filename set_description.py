@@ -144,7 +144,7 @@ Recent commit messages:
 Current PR description:
 {pr_info.body if pr_info.body else "No description provided"}
 
-Please provide a concise, professional PR description:
+Please provide a concise, professional PR description using Github markdown without emojis:
 """
         
         try:
@@ -226,11 +226,8 @@ def main(repo: Optional[str], pr: Optional[int], token: Optional[str]):
         return
     
     # Display new description
-    console.print(Panel(
-        Text(new_description, style="white"),
-        title="Generated PR Description",
-        border_style="green"
-    ))
+    console.print(Text("Generated PR Description", style="bold"))
+    console.print(Text(new_description, style="white"))
 
 if __name__ == "__main__":
     main() # type: ignore
